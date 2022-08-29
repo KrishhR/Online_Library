@@ -1,0 +1,180 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.landingPage{
+    width: 100%;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3krDo0gxt_Q3g-u6PmniykHfNfeLn780OQzpmU-d9PIyQK6WT23lKGXapLispe9wG0Mk&usqp=CAU") no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 3vh 2vh;
+}
+.logo{
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: #ff8000;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+.signBtn>button{
+    border: none;
+    outline: none;
+    background-color: #ff8000;
+    color: white;
+    padding: 0.7vw 3vw;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.signBtn>button:hover{
+    transform: scale(1.05);
+}
+.signBtn{
+    width: 13%;
+    margin-left: auto;
+}
+.content{
+    background-color: rgba(255, 255, 255, 0.202);
+    width: 75%;
+    margin: auto;
+    margin-top: 3vh;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.introText{
+    width: 50%;
+    height: 70vh;
+    padding: 12vh 2vw;
+}
+.heading{
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+#para{
+    font-size: small;
+    padding: 1vw 2.5vw 0 0.5vw;
+    text-align: left;
+    line-height: 3vh;
+    color: gray;
+}
+.imgDiv{
+    width: 50%;
+    background-image: url('../images/landingPage.jpg');
+    background-repeat: no-repeat;
+    background-size: 70vh;
+    background-position: center;
+
+}
+.searchBook{
+    border: none;
+    outline: none;
+    padding: 1.5vw;
+    background-color: white;
+    width: 60%;
+    border-radius: 8px 0 0 8px;
+}
+.searchContainer{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.searchBook:focus{
+    background-color: rgb(220, 240, 255);
+}
+.searchBook::placeholder{
+    color: rgb(5, 101, 226);
+}
+#searchBtn{
+    color: white;
+    background-color: #ff8000;
+    border: none;
+    outline: none;
+    padding: 1.5vw 0vw;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    width: 35%;
+}
+#searchBtn:hover{
+    transform: scale(1.05);
+}
+.signUpform{
+    border: none;
+    outline: none;
+    padding: 1vw;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+#submitBtn{
+    color: white;
+    background-color: black;
+    width: 100%;
+    margin-top: 5vh;
+}
+.sideLine{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ccc;
+    margin-top: 3vh;
+}
+.sideLine::before,
+.sideLine::after{
+    content: '';
+    border-top: 1px solid #b4b4b4;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+}
+.sideLine::after{
+    margin: 0 0 0 20px;
+}
+#fbBtn{
+    color: white;
+    background-color: dodgerblue;
+    width: 100%;
+    margin-top: 3vh;
+}
+@media only screen and (max-width:660px) {
+    .content{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 90%;
+        height:80%;
+    }
+    .introText{
+        width: 100%;
+        height: 60%;
+    }
+    .imgDiv{
+        width: 100%;
+        height: 50%;
+        border-radius: 15px 15px;
+    }
+    .signBtn{
+        width: 25%;
+    }
+    .signBtn>button{
+        font-size: 4vw;
+    }
+    .logo{
+        font-size: 7vw;
+    }
+    #para{
+        font-size: 2.5vw;
+    }
+    .searchBook{
+        font-size: 3vw;
+    }
+    #searchBtn{
+        font-size: 3vw;
+    }
+}

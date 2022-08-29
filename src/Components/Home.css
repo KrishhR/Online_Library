@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    
+    height: 100vh;
+    width: 100%;
+    padding: 3vw;
+}
+.card{
+    display: flex;
+    margin-bottom: 5vh;
+    background-color: #fef1e0;
+    height: 40%;
+    /* border-radius: 20px; */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.card-image{
+    width: 20%;
+}
+.card-image>img{
+    
+    /* border-radius: 9px 0 0 9px; */
+}
+.card-content{
+    width: 60%;
+    padding: 2vw;
+    line-height: 5vh;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+}
+.authorName:hover{
+    cursor: pointer;
+    color: dodgerblue;
+}
+.btnSet{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    padding: 1vw;
+}
+.btnSet>Button{
+    width: 100%;
+    background-color: #ff8000;
+}
+.btnSet>Button:hover{
+    background-color: rgba(0, 128, 0, 0.824);
+}
+@media only screen and (max-width:660px) {
+    .card{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin: auto;
+        height: 80%;
+        margin-bottom: 3vh;
+        padding: 2vw;
+    }
+    .card-image{
+        width: 65%;
+        height: 55%;
+        margin: auto;
+        margin-top: 1vh;  
+    }
+    .card-content{
+        text-align: center;
+        width: 100%;
+        line-height: 3.5vh;
+        font-size: 2.7vw;
+    }
+    .btnSet{
+        width: 100%;
+    }
+    .firstPublished{
+        margin-top: 1vh ;
+    }
+    
+}
+@media only screen and (max-width:430px) {
+    .card{
+        width: 100%;
+        height: 90%;
+        padding-bottom: 2vh;
+    }
+    .card-image{
+        width: 90%;
+        height: 60%;
+        margin: auto;
+        margin-top: 1vh;  
+    }
+    .card-content{
+        text-align: center;
+        width: 100%;
+        line-height: 3.2vh;
+        font-size: 4.8vw;
+    }
+    .btnSet{
+        width: 100%;
+    }
+    .firstPublished{
+        margin-top: 1vh ;
+    }
+}

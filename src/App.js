@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext, useState } from "react";
+import LandingPage from "./Components/LandingPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Components/Home";
+
+export let context = createContext();
 
 function App() {
+
+  let [ book, setBook ] = useState('');
+  // let [ data, setData ] = useState([]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+      <context.Provider value={{ book, setBook  }} >
+        <BrowserRouter>
+          <Routes>
+              <Route path="/" element={ <LandingPage /> } />
+              <Route path="/home" element={ <Home /> } />
+          </Routes>
+        </BrowserRouter>
+      </context.Provider>
     </div>
   );
 }
