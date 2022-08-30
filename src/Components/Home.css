@@ -3,32 +3,48 @@
     padding: 0;
     box-sizing: border-box;
 }
+.mainContainer{
+    padding: 2vw 4vw;
+    background: url(https://images.indianexpress.com/2020/04/books_759.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 .container{
-    
-    height: 100vh;
+    border: 3px solid #ddd;
+    background-color: rgba(0, 0, 0, 0.603);
+    border-radius: 10px;
+    height: 93vh;
     width: 100%;
     padding: 3vw;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    overflow-y: scroll;
 }
+::-webkit-scrollbar {
+    display: none;
+  }
 .card{
     display: flex;
-    margin-bottom: 5vh;
     background-color: #fef1e0;
-    height: 40%;
-    /* border-radius: 20px; */
+    /* height: 45%; */
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5vh;
+    border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .card-image{
     width: 20%;
+    padding: 1vw;
 }
 .card-image>img{
-    
-    /* border-radius: 9px 0 0 9px; */
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .card-content{
     width: 60%;
     padding: 2vw;
     line-height: 5vh;
-    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
 }
 .authorName:hover{
     cursor: pointer;
@@ -53,13 +69,13 @@
         flex-direction: column;
         width: 60%;
         margin: auto;
-        height: 80%;
+        height: 90%;
         margin-bottom: 3vh;
         padding: 2vw;
     }
     .card-image{
-        width: 65%;
-        height: 55%;
+        width: 55%;
+        height: 40%;
         margin: auto;
         margin-top: 1vh;  
     }
@@ -67,7 +83,7 @@
         text-align: center;
         width: 100%;
         line-height: 3.5vh;
-        font-size: 2.7vw;
+        font-size: 2vw;
     }
     .btnSet{
         width: 100%;
@@ -79,21 +95,25 @@
 }
 @media only screen and (max-width:430px) {
     .card{
-        width: 100%;
-        height: 90%;
+        width: 95%;
+        height: 100%;
         padding-bottom: 2vh;
     }
     .card-image{
-        width: 90%;
-        height: 60%;
+        /* width: 70%; */
+        height: 45%;
         margin: auto;
         margin-top: 1vh;  
     }
     .card-content{
         text-align: center;
+        height: 40%;
         width: 100%;
-        line-height: 3.2vh;
-        font-size: 4.8vw;
+        line-height: 3vh;
+        font-size: 4vw;
+    }
+    .card-content>img{
+        margin-top: 3vh;
     }
     .btnSet{
         width: 100%;
@@ -101,4 +121,30 @@
     .firstPublished{
         margin-top: 1vh ;
     }
+}
+
+.searchResHead{
+    color: white;
+    text-shadow: 3px 3px #474747;
+    text-align: center;
+    margin-bottom: 5vh;
+} 
+
+/* ---------loader---------- */
+
+#loader{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20%;
+    margin: auto;
+    text-align: center;
+}
+.overLay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(101, 101, 101, 0.305);
 }

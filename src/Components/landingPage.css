@@ -173,8 +173,14 @@
     }
     .searchBook{
         font-size: 3vw;
+        padding: 2.8vw;
     }
     #searchBtn{
+        padding: 3vw;
         font-size: 3vw;
+    }
+    #snackbar{
+        width: 50vw;
+        height: 20vh;
     }
 }

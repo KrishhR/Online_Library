@@ -1,9 +1,10 @@
-import { Button, Modal, Typography } from '@mui/material';
+import { Alert, Button, Modal, Snackbar, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import './landingPage.css';
 import { context } from '../App';
+import MuiAlert from '@mui/material/Alert';
 
 const style = {
     position: 'absolute',
@@ -18,15 +19,37 @@ const style = {
     textAlign:'center'
   };
 
+
 const LandingPage = () => {
     const txt = useContext(context);
     const navigate = useNavigate();
     
+    const [open2, setOpen2] = React.useState(false);  //snackbar state
+    
+    const [open, setOpen] = React.useState(false);  //Modal State
 
-    const [open, setOpen] = React.useState(false);
+
+    //Functions for SignUp form Modal
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
+
+
+  // FUnctuions for snackbar
+    const handleClick = () => {
+      setOpen2(true);
+    }
+  
+    const handleClose2 = (event, reason) => {
+      if (reason === 'clickaway') {
+        return;
+      }
+  
+      setOpen2(false);
+    }
+
+
+    // Function for searching the book
 
     const search = (e) => {
         if(e.key==='Enter' || e.target.id === 'searchBtn'){
@@ -34,10 +57,11 @@ const LandingPage = () => {
 
             if(inpt !== ""){
                 txt.setBook(inpt);
+                txt.setLoading(true);
                 navigate('/home');
             }
             else{
-                alert('Not Found');
+                handleClick();
             }
         }
        
@@ -71,10 +95,9 @@ const LandingPage = () => {
 
     </div>
 
-    <div>
 
-        
-     
+{/* ------------Sign Up Form Modal-------- */}
+    <div>
       <Modal
         open={open}
         onClose={handleClose}
@@ -113,6 +136,14 @@ const LandingPage = () => {
         </Box>
       </Modal>
     </div>
+
+    {/* ----SnackBar------- */}
+    
+    <Snackbar id='snackbar' open={open2} autoHideDuration={3000} onClose={handleClose2}>
+        <Alert onClose={handleClose2} severity="error" sx={{ width: '100%' }}>
+          This is a success message!
+        </Alert>
+      </Snackbar>
     </>
   )
 }
