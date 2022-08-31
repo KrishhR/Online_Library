@@ -10,13 +10,13 @@ function App() {
 
   let [ book, setBook ] = useState('');
   let [ isLoading, setLoading ] = useState(false);
-  let [ bookData, setBookData ] = useState([]);
-  let [ detail, setDetail ] = useState('');
+  let [ isbn, setIsbn ] = useState('');
+  
 
   return (
     <div className="App">
     
-      <context.Provider value={{ book, setBook, isLoading, setLoading, bookData, setBookData, detail, setDetail }} >
+      <context.Provider value={{ book, setBook, isLoading, setLoading, isbn, setIsbn }} >
         <BrowserRouter>
           <Routes>
               <Route path="/" element={ <LandingPage /> } />

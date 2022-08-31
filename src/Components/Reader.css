@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.detail-page{
+    height: 100vh;
+    padding-top: 5vh;
+    background: url(https://images.indianexpress.com/2020/04/books_759.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.book-div{
+    background-color: white;
+    width: 80%;
+    height: 96%;
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    padding: 2vw;
+    line-height: 4vh;
+    box-shadow: rgba(0, 0, 0, 0.626) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.img_div{
+    border: 1px solid #ddd;
+    width: 30%;
+    padding: 1vw;
+    border-radius: 3px;
+}
+.detail_img{
+    width: 100%;
+    height: 50%;
+    margin: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border: none;
+    border-radius: 5px;
+}
+.detail_img:hover{
+    transform: perspective(400px) rotateY(-10deg);
+    cursor: pointer;
+}
+.content_div{
+    width: 70%;
+    margin-left: 2vw;
+    padding: 2vw;
+}
+em{
+    font-size: small;
+    color: gray;
+}
+.basic_desc{
+    border-bottom: 1px solid rgb(94, 94, 94);
+    padding-bottom: 4vh;
+}
+.info{
+    display: flex;
+    justify-content: space-around;
+    padding: 2vw;
+    border-bottom: 1px solid rgb(94, 94, 94);
+    background-color: #eee;
+    border-radius: 3px;
+}
+.err{
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.742);
+    padding: 3vw;
+    margin: auto;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.709);
+    margin-top: 15vh;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.err:hover{
+    transform: perspective(400px) rotateY(8deg);
+
+}
+#goBackFromErr{
+    background-color: #ff8000;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+#goBackFromErr:hover{
+    transform: scale(1.05);
+}
+@media only screen and (max-width: 650px) {
+    .book-div{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        line-height: 3.5vh;
+        font-size: small;
+    }
+    .img_div{
+        width: 90%;
+        height: 30%;
+        margin: auto;
+        border: none;
+    }
+    .img_div>img{
+        width: 60%;
+        height: 90%;
+        box-shadow: none;
+        margin-left: 20%;
+    }
+    .content_div{
+        width: 100%;
+        height: 70%;
+    }
+}

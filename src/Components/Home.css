@@ -63,6 +63,16 @@
 .btnSet>Button:hover{
     background-color: rgba(0, 128, 0, 0.824);
 }
+.search{
+    width: 50%;
+    height: 30%;
+    padding: 1.5vw;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+}
 @media only screen and (max-width:660px) {
     .card{
         display: flex;
