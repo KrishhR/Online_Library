@@ -1,8 +1,9 @@
-import { Button } from "@mui/material";
+import { Button, CircularProgress } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { context } from "../App";
 import "./Reader.css";
 import { Link } from "react-router-dom";
+import { Box } from "@mui/system";
 
 const Reader = () => {
   let txt = useContext(context);
@@ -16,12 +17,25 @@ const Reader = () => {
         .then((response) => response.json())
         .then((data) => {
           setDetail(Object.values(data)[0].details);
+          console.log(Object.values(data)[0].details);
+          txt.setLoading(false);
         });
   }, []);
 
   return (
     <div className="detail-page">
-      {detail.length !== 0 ? (
+      {txt.isLoading === true ? (
+        <>
+          <div className="overLay">
+            <div>
+              <Box id="loader" sx={{ display: "flex" }}>
+                <CircularProgress sx={{ color: "White" }} />
+                <div style={{ color: "white" }}>Loading...</div>
+              </Box>
+            </div>
+          </div>
+        </>
+      ) : detail.length !== 0 ? (
         <div className="book-div">
           <div className="img_div">
             {detail.covers !== undefined ? (
@@ -54,6 +68,7 @@ const Reader = () => {
               )}
             </div>
 
+            <h4 style={{ color: "dodgerblue" }}>Overview -&gt;</h4>
             <div className="info">
               <div
                 style={{
@@ -116,21 +131,84 @@ const Reader = () => {
               </div>
             </div>
 
-            <div></div>
+            <div style={{ display: "flex", width: "100%" }}>
+              <div
+                style={{
+                  width: "50%",
+                  
+                  padding: "1vw",
+                }}
+              >
+                <strong>&gt; Latest Revision: </strong>&nbsp;
+                {detail.hasOwnProperty("latest_revision") ? (
+                  <>
+                    
+                      <span>{detail.latest_revision}</span>
+                    
+                  </>
+                ) : (
+                  ""
+                )}
+                <br />
+                <br />
+                <h4 style={{ color: "dodgerblue" }}>
+                  The Physical Apperance -&gt;
+                </h4>
+                <strong>&gt; Pagination:</strong>&nbsp;
+                {detail.hasOwnProperty("pagination") ? (
+                  <>
+                    <span>{detail.pagination}</span>
+                  </>
+                ) : (
+                  "N.A."
+                )}
+                <br />
+                <strong>&gt; Number of Pages:</strong>&nbsp;
+                {detail.hasOwnProperty("number_of_pages") ? (
+                  <>
+                    <span>{detail.number_of_pages}</span>
+                  </>
+                ) : (
+                  "N.A."
+                )}
+                <br/>
+                <br />
+
+                <h4 style={{color:'dodgerblue'}}>IDs -&gt;</h4>
+
+
+              </div>
+
+              <div style={{ width: "50%", padding: "1vw" }}>
+
+                  <strong style={{color:'dodgerblue'}}>Subjects: </strong>
+                    {
+                      // detail.hasOwnProperty('')
+                    }
+                  <br/>
+
+                  <strong style={{color:'dodgerblue'}}>People: </strong>
+              </div>
+            </div>
           </div>
         </div>
       ) : (
-        (
-          <>
+        <>
           <div className="err">
-            <h1><span style={{fontSize:'5vw'}}>\_(ツ)_/</span> <br/> ERROR 404, Not Found!</h1>
-            <br /><br />
-            <Link to={'/'} style={{textDecoration:'none'}}><Button variant='contained' id='goBackFromErr'>SEARCH AGAIN</Button></Link>
+            <h1>
+              <span style={{ fontSize: "5vw" }}>\_(ツ)_/</span> <br /> ERROR
+              404, Not Found!
+            </h1>
+            <br />
+            <br />
+            <Link to={"/"} style={{ textDecoration: "none" }}>
+              <Button variant="contained" id="goBackFromErr">
+                SEARCH AGAIN
+              </Button>
+            </Link>
           </div>
-          </>
-        )
+        </>
       )}
-      
     </div>
   );
 };

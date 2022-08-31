@@ -127,7 +127,7 @@ const Home = () => {
                       name={val.isbn !== "" ? `${val.isbn[0]}` : ""}
                       onClick={readMore}
                     >
-                      Read More <ReadMoreIcon />
+                      Know More <ReadMoreIcon />
                     </Button>
                   </div>
                 </div>
