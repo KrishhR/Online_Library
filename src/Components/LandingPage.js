@@ -4,8 +4,9 @@ import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import './landingPage.css';
 import { context } from '../App';
-import MuiAlert from '@mui/material/Alert';
 
+
+// SignUp Form Modal Style CSS
 const style = {
     position: 'absolute',
     top: '50%',
@@ -16,6 +17,7 @@ const style = {
     boxShadow: 24,
     p: 4,
     backgroundColor:'white',
+    color: 'black',
     textAlign:'center'
   };
 
@@ -141,9 +143,11 @@ const LandingPage = () => {
     
     <Snackbar id='snackbar' open={open2} autoHideDuration={3000} onClose={handleClose2}>
         <Alert onClose={handleClose2} severity="error" sx={{ width: '100%' }}>
-          This is a success message!
+          Please enter the book name.
         </Alert>
       </Snackbar>
+
+    
     </>
   )
 }

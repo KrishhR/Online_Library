@@ -1,0 +1,61 @@
+:root{
+    --landingPageBackground: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3krDo0gxt_Q3g-u6PmniykHfNfeLn780OQzpmU-d9PIyQK6WT23lKGXapLispe9wG0Mk&usqp=CAU") no-repeat;
+    --para: gray;
+    --searchBox: white;
+    --homeCard: #fef1e0;
+    --containerBS: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    --book: white;
+    --infoDiv: #eee;
+    --errDiv: rgba(255, 255, 255, 0.742);
+    --errColor : rgba(0, 0, 0, 0.709);
+    --theme : rgba(0, 0, 0, 0.628);
+    --themeIcon: white;
+}
+
+.dark-mode{
+    background-color: black;
+    color: white;
+    --landingPageBackground: url('https://thumbs.dreamstime.com/b/open-book-dark-tabletop-light-open-book-dark-tabletop-light-pages-120669109.jpg') no-repeat;
+    --para: rgb(188, 188, 188);
+    --searchBox: lightgray;
+    --homeCard:#13100dde;
+    --containerBS: rgba(104, 104, 104, 0.25) 0px 30px 60px -12px inset, rgba(208, 208, 208, 0.3) 0px 18px 36px -18px inset;
+    --book: rgba(43, 40, 40, 0.946);
+    --infoDiv: rgba(43, 40, 40, 0.912);
+    --errDiv: rgba(0, 0, 0, 0.742);
+    --errColor : rgba(255, 255, 255, 0.709);
+    --theme: rgba(255, 255, 255, 0.628);
+    --themeIcon: black;
+}
+.themeBtn{
+    position: fixed;
+    top:90%;
+    right: 2%;
+    padding: 0.5vw;
+    border-radius: 50%;
+    color: var(--themeIcon);
+    background-color: var(--theme);
+    cursor: pointer;
+}
+.themeBtn:hover{
+    transform: scale(1.05);
+}
+#darkBtn{
+    font-size: 3vw;
+}
+
+#lightMode{
+    font-size: 3vw;
+}
+@media only screen and (max-width: 600px) {
+    .themeBtn{
+        padding: 2vw;
+        top: 3%;
+    }
+    #darkBtn{
+        font-size: 6vw;
+    }
+    #lightMode{
+        font-size: 6vw;
+    }
+}

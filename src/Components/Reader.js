@@ -18,7 +18,6 @@ const Reader = () => {
         .then((response) => response.json())
         .then((data) => {
           setDetail(Object.values(data)[0].details);
-          console.log(Object.values(data)[0].details);
           txt.setLoading(false);
         });
   }, []);

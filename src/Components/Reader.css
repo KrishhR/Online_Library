@@ -4,11 +4,11 @@
     box-sizing: border-box;
 }
 .detail-page{
-    height: 100vh;
     padding-top: 5vh;
     background: url(https://images.indianexpress.com/2020/04/books_759.jpg) no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    padding-bottom: 3vh;
+    height: 110vh;
 }
 #goBackBtn{
     background-color: #ff8000;
@@ -18,9 +18,8 @@
     
 }
 .book-div{
-    background-color: white;
+    background-color: var(--book);
     width: 80%;
-    height: 96%;
     margin: auto;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -64,17 +63,18 @@ em{
     display: flex;
     justify-content: space-around;
     padding: 1vw;
+    border-top: 1px solid rgb(94, 94, 94);
     border-bottom: 1px solid rgb(94, 94, 94);
-    background-color: #eee;
+    background-color: var(--infoDiv);
     border-radius: 3px;
 }
 .err{
     width: 60%;
-    background-color: rgba(255, 255, 255, 0.742);
+    background-color: var(--errDiv);
     padding: 3vw;
     margin: auto;
     text-align: center;
-    color: rgba(0, 0, 0, 0.709);
+    color: var(--errColor);
     margin-top: 15vh;
     border-radius: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
