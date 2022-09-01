@@ -10,6 +10,13 @@
     background-size: cover;
     background-attachment: fixed;
 }
+#goBackBtn{
+    background-color: #ff8000;
+    width: 90%;
+    margin-top: 15%;
+    margin-left: 5%;
+    
+}
 .book-div{
     background-color: white;
     width: 80%;
@@ -23,9 +30,9 @@
     box-shadow: rgba(0, 0, 0, 0.626) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .img_div{
-    border: 1px solid #ddd;
+    border-right: 1px solid #ddd;
     width: 30%;
-    padding: 1vw;
+    padding: 1vw 2vw;
     border-radius: 3px;
 }
 .detail_img{
@@ -50,7 +57,7 @@ em{
     color: gray;
 }
 .basic_desc{
-    border-bottom: 1px solid rgb(94, 94, 94);
+    
     padding-bottom: 1vh;
 }
 .info{  
@@ -85,6 +92,9 @@ em{
 }
 #goBackFromErr:hover{
     transform: scale(1.05);
+}
+.googleBtn{
+    width: 90%;
 }
 @media only screen and (max-width: 650px) {
     .book-div{

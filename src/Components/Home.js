@@ -33,6 +33,8 @@ const Home = () => {
     }
   };
 
+  
+
   return (
     <div className="mainContainer">
       <div className="container">
@@ -44,13 +46,7 @@ const Home = () => {
           }}
         >
           <h1 className="searchResHead">Search Result</h1>
-          <input
-            type="text"
-            className="search"
-            placeholder="Search your book.."
-            autoFocus
-            autoComplete="on"
-          />
+         
         </div>
         {txt.isLoading === true ? (
           <div className="overLay">
