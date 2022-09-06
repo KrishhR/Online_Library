@@ -275,7 +275,7 @@ const Reader = () => {
                       >
                         {" "}
                         <Button variant="contained" id="readBtn">
-                          Read
+                          Click to Read
                         </Button>
                       </a>
                     }
