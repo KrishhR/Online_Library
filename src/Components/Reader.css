@@ -96,6 +96,15 @@ em{
 .googleBtn{
     width: 90%;
 }
+#readBtn{
+    background-color: green;
+    color: white; 
+    width: 100%;
+    margin-top: 2vh;  
+}
+#readBtn:hover{
+    background-color:rgba(0, 128, 0, 0.824);
+}
 @media only screen and (max-width: 650px) {
     .book-div{
         display: flex;

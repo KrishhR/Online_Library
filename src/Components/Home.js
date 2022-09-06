@@ -8,6 +8,7 @@ import Box from "@mui/material/Box";
 import { useNavigate } from "react-router-dom";
 
 var isbn;
+
 const Home = () => {
   const navigate = useNavigate();
 
@@ -25,6 +26,16 @@ const Home = () => {
       });
   }, []);
 
+  // useEffect(() => {
+  //     fetch(
+  //       `https://openlibrary.org/api/books?bibkeys=ISBN:${txt.isbn}&jscmd=details&format=json`
+  //     )
+  //       .then((response) => response.json())
+  //       .then((data) => {
+  //         setBookPreview(data)
+  //       });
+  // }, []);
+
   const readMore = (event) => {
     isbn = event.target.name;
     if (isbn !== "") {
@@ -33,7 +44,16 @@ const Home = () => {
     }
   };
 
-  
+  // const read = () => {
+  //   fetch(
+  //     `https://openlibrary.org/api/books?bibkeys=ISBN:${isbn}&jscmd=details&format=json`
+  //   )
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setBookPreview(data)
+  //       console.log(bookPreview);
+  //     });
+  // }
 
   return (
     <div className="mainContainer">
@@ -125,6 +145,7 @@ const Home = () => {
                     >
                       Know More <ReadMoreIcon />
                     </Button>
+                  
                   </div>
                 </div>
               );
